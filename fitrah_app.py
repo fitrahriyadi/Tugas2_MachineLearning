@@ -14,7 +14,7 @@ st.set_page_config(
 @st.cache_resource
 def load_assets():
     # Pastikan file model dan csv ada di folder yang sama
-    model = joblib.load('diamond_best_model.pkl')
+    model = joblib.load('diamond_xgb_model.pkl')
     df_sample = pd.read_csv('diamonds.csv')
     return model, df_sample
 
@@ -145,4 +145,5 @@ with col2:
         st.balloons()
 
 st.divider()
+
 st.caption("Aplikasi Prediksi Harga Berlian - Fitrah Riyadi (E1E123032)")
